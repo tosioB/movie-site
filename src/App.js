@@ -1,18 +1,18 @@
-import { Route, Routes, Link } from 'react-router-dom';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import './App.scss';
 import Home from './components/Home';
 import Detail from './components/Detail';
 
 function App() {
   return (
     <>
-      <div>
+      {/* <div>
         <Link to="/Home">HOME</Link>
         <Link to="/Detail">DETAIL</Link>
-      </div>
+      </div> */}
       <Routes>
         <Route path='/Home' element={<Home />} />
-        <Route path='/Detail:id' element={<Detail />} />
+        <Route path='/Detail/:id' element={<Detail />} />
       </Routes>
     </>
   );

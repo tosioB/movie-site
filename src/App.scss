@@ -1,0 +1,125 @@
+$bg-color: #343434;
+$green-color: #81C784;
+$gray-color: #e1e1e1;
+$white-color: #FFF;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  background-color: $bg-color
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.movie-site {
+  padding: 60px;
+  .btn {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 14px;
+    white-space: nowrap;
+    background-color: $green-color;
+    border: none;
+    border-radius: 4px;
+    color: $white-color;
+  }
+  .search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .inp-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 500px;
+      input[type="text"] {
+        width: 100%;
+        height: 32px;
+        padding: 0 8px;
+        background-color: $white-color;
+        border: 1px solid $gray-color;
+        border-radius: 4px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .sel-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 300px;
+      select {
+        width: 100%;
+        height: 32px;
+        padding: 0 8px;
+        background-color: $white-color;
+        border: 1px solid $gray-color;
+        border-radius: 4px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .movie-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+    margin-top: 16px;
+    .movie {
+      width: calc(33.333% - 16px);
+      background-color: $white-color;
+      .img-box {
+        display: block;
+        height: 496px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 0.6s;
+        }
+        &:hover {
+          img {
+            transform: scale(1.1);
+            transition: all 0.6s;
+          }
+        }
+      }
+      .text-box {
+        padding: 12px 20px;
+        .title {
+          max-height: 54px;
+          font-size: 20px;
+          font-weight: 700;
+          display: -webkit-box;
+          white-space: normal;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+        .date {
+          margin-top: 2px;
+          font-size: 14px;
+        }
+        .desc {
+          margin-top: 2px;
+          font-size: 14px;
+          display: -webkit-box;
+          white-space: normal;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+}
