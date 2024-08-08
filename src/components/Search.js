@@ -1,4 +1,8 @@
+import { useSearchParams } from "react-router-dom";
+
 function Search({ sortedOption, handleSortChange }) {
+  const [searchParams] = useSearchParams();
+  console.log(searchParams.get('movie'))
   return (
     <div className="search-box">
       <span className="inp-box">

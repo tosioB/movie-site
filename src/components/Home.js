@@ -24,7 +24,7 @@ function Home() {
   const [hasMore, setHasMore] = useState(true); // 페이지 상태
   const [sortedOption, setSortedOption] = useState('a'); // 정렬 기준 저장
   const [sortedData, setSortedData] = useState(data); // 정렬된 데이터 저장
-  const PER_PAGE = 9; // 보여지는 페이지 수
+  const PER_PAGE = 12; // 보여지는 페이지 수
 
   useEffect(() => { // 데이터 호출 기능
     const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
