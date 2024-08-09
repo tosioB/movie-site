@@ -1,16 +1,13 @@
-import { useSearchParams } from "react-router-dom";
+function Search({ sortedOption, handleSortChange, searchInput, handleSearchChange }) {
 
-function Search({ sortedOption, handleSortChange }) {
-  const [searchParams] = useSearchParams();
-  console.log(searchParams.get('movie'))
   return (
     <div className="search-box">
       <span className="inp-box">
-        <input type="text" />
-        <button type="button" className="btn find-btn">찾기</button>
+        <input type="text" value={searchInput} onChange={handleSearchChange} placeholder="검색어를 입력하세요." />
       </span>
       <span className="sel-box">
         <select onChange={handleSortChange} value={sortedOption}>
+          <option value="z">선택</option>
           <option value="a">가나다순</option>
           <option value="b">가나다역순</option>
           <option value="c">평점 높은순</option>
