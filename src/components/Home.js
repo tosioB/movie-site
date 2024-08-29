@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { BASE_URL, API_KEY } from '../data/movie_key'
+import { BASE_URL } from '../data/movie_key'
 import Movie from './Movie'
 import Search from "./Search";
+
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const fetchMovies = async (pages) => { // 여러 페이지의 영화 데이터를 비동기적으로 가져오는 함수
   try {
